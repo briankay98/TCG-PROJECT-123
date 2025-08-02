@@ -1,0 +1,339 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Search Section */
+.search-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.basic-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.basic-search input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.basic-search button {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.basic-search button:hover {
+    background-color: #2980b9;
+}
+
+/* Basic Filters */
+.basic-filters {
+    margin-bottom: 20px;
+}
+
+.price-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.price-filter label {
+    font-weight: bold;
+    color: #555;
+}
+
+.price-filter input {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 120px;
+}
+
+/* Advanced Toggle */
+.advanced-toggle {
+    margin-bottom: 20px;
+}
+
+.advanced-toggle button {
+    padding: 10px 20px;
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.advanced-toggle button:hover {
+    background-color: #7f8c8d;
+}
+
+/* Advanced Filters Panel */
+.advanced-filters {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 6px;
+    border: 2px solid #bdc3c7;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.advanced-filters.hidden {
+    display: none;
+}
+
+.advanced-filters h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-group > label {
+    font-weight: bold;
+    color: #555;
+    min-width: 80px;
+}
+
+.filter-group select {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    min-width: 150px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin: 0;
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-range input {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.date-range span {
+    color: #666;
+    font-weight: normal;
+}
+
+/* Results Section */
+.results-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.results-count {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card Item Styles */
+.card-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.card-detail {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.card-platform {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 8px;
+}
+
+.card-platform.ebay {
+    background-color: #e74c3c;
+}
+
+.card-platform.tcgplayer {
+    background-color: #f39c12;
+}
+
+.card-platform.yuyu-tei {
+    background-color: #9b59b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .basic-search {
+        flex-direction: column;
+    }
+    
+    .price-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .date-range {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .results-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading and Empty States */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Animation for filter toggle */
+.advanced-filters {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
